@@ -1,4 +1,4 @@
-package Flash
+package crawler
 
 import (
 	"net/url"
@@ -9,7 +9,7 @@ import (
 
 // GetURLsFromHTML parses HTML and extracts all anchor tag hrefs, converting them to absolute URLs.
 func GetURLsFromHTML(htmlBody, rawBaseURL string) ([]string, error) {
-	urls := []string{} // 👈 important line
+	urls := []string{} // Initialize empty slice for URLs
 
 	base, err := url.Parse(rawBaseURL)
 	if err != nil {

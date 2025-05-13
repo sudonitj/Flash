@@ -1,9 +1,9 @@
-package tests
+package crawler_test
 
 import (
 	"testing"
 
-	"github.com/sudonitj/Flash"
+	"github.com/sudonitj/Flash/crawler"
 )
 
 func TestNormalizeURL(t *testing.T) {
@@ -51,7 +51,7 @@ func TestNormalizeURL(t *testing.T) {
 
 	for i, tc := range tests {
 		t.Run(tc.name, func(t *testing.T) {
-			actual, err := Flash.NormalizeURL(tc.inputURL)
+			actual, err := crawler.NormalizeURL(tc.inputURL)
 			if err != nil {
 				t.Errorf("Test %v - '%s' FAIL: unexpected error: %v", i, tc.name, err)
 				return

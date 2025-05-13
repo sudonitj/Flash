@@ -1,4 +1,4 @@
-package Flash
+package crawler
 
 import (
 	"net/url"

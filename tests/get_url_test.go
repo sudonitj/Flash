@@ -1,10 +1,10 @@
-package tests
+package crawler_test
 
 import (
 	"reflect"
 	"testing"
 
-	flash "github.com/sudonitj/Flash"
+	"github.com/sudonitj/Flash/crawler"
 )
 
 func TestGetURLsFromHTML(t *testing.T) {
@@ -56,7 +56,7 @@ func TestGetURLsFromHTML(t *testing.T) {
 
 	for _, tc := range tests {
 		t.Run(tc.name, func(t *testing.T) {
-			actual, err := flash.GetURLsFromHTML(tc.inputBody, tc.inputURL)
+			actual, err := crawler.GetURLsFromHTML(tc.inputBody, tc.inputURL)
 			if err != nil {
 				t.Errorf("unexpected error: %v", err)
 			}

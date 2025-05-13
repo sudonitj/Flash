@@ -1,11 +1,13 @@
-package Flash
+package main
 
 import (
 	"fmt"
 	"os"
+	
+	"github.com/sudonitj/Flash/crawler"
 )
 
-func Flash() {
+func main() {
 	args := os.Args[1:] // skip the program name
 
 	if len(args) < 1 {
@@ -19,6 +21,6 @@ func Flash() {
 	baseURL := args[0]
 	fmt.Println("starting crawl of:", baseURL)
 
-	// You can call your crawler logic here, e.g.
-	// Flash.Crawl(baseURL)
+	// Call crawler logic
+	crawler.Crawl(baseURL)
 }
