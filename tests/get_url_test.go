@@ -16,12 +16,12 @@ func TestGetURLsFromHTML(t *testing.T) {
 	}{
 		{
 			name:     "absolute and relative URLs",
-			inputURL: "https://blog.boot.dev",
+			inputURL: "https://ekas.sudo",
 			inputBody: `
 			<html>
 				<body>
 					<a href="/path/one">
-						<span>Boot.dev</span>
+						<span>Ekas Link</span>
 					</a>
 					<a href="https://other.com/path/one">
 						<span>External</span>
@@ -29,11 +29,11 @@ func TestGetURLsFromHTML(t *testing.T) {
 				</body>
 			</html>
 			`,
-			expected: []string{"https://blog.boot.dev/path/one", "https://other.com/path/one"},
+			expected: []string{"https://ekas.sudo/path/one", "https://other.com/path/one"},
 		},
 		{
 			name:     "no links in body",
-			inputURL: "https://boot.dev",
+			inputURL: "https://ekas.sudo",
 			inputBody: `
 			<html><body><h1>No links here</h1></body></html>
 			`,
