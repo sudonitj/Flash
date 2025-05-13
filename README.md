@@ -28,7 +28,7 @@
 Clone the repository:
 
 ```bash
-git clone https://github.com/ekas-7/flash.git
+git clone https://github.com/sudonitj/Flash
 cd flash
 go mod tidy
 ```
